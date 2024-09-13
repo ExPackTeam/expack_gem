@@ -121,6 +121,22 @@ nav ul.nav-list img.nav-icon {
   float: right;
 }
 
+.math .times-x::before {
+  content: "×";
+}
+.math .divide::before {
+  content: "÷";
+}
+.math .mean::before {
+  content: "x̄";
+}
+.math .sigma::before {
+  content: "Σ";
+}
+.math .delta::before {
+  content: "Δ";
+}
+
 .close {
   color: #aaa;
   float: right;
@@ -144,4 +160,4 @@ a::after {
   content: "link";
 }
 
-/*# sourceMappingURL=dist_global.css.map */
+/*# sourceMappingURL=expack.css.map */
