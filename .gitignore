@@ -6,7 +6,5 @@
 /pkg/
 /spec/reports/
 /tmp/
-/expack_gem/
-
 # rspec failure tracking
 .rspec_status
