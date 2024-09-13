@@ -1,8 +1,6 @@
 # ExpackGem
-
-TODO: Delete this and the text below, and describe your gem
-
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/expack_gem`. To experiment with that code, run `bin/console` for an interactive prompt.
+The official ExPack Ruby gem!
+This gem is built to allow you to seemlessly use ExPack in Ruby on Rails.
 
 ## Installation
 
