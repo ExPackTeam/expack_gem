@@ -5,7 +5,7 @@ require_relative "lib/expack_gem/version"
 Gem::Specification.new do |spec|
   spec.name = "expack_gem"
   spec.version = ExpackGem::VERSION
-  spec.authors = ["ruby_rose"]
+  spec.authors = ["TeamExpack"]
   spec.email = ["46199301+MicroRay620@users.noreply.github.com"]
 
   spec.summary = "The official ruby gem for ExPack web library."
