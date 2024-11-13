@@ -1,0 +1,25 @@
+.align-left {
+	float: left;
+}
+.align-center {
+	justify-content: center;
+	display: flex;
+	text-align: center;
+	margin: 0 auto;
+	//width: 50%;
+}
+.align-right {
+	float: right;
+}
+.justify-left {
+	justify-content: left;
+}
+.justify-center {
+	justify-content: center;
+}
+.justify-right {
+	justify-content: right;
+}
+.margin-auto {
+    margin: auto;
+}

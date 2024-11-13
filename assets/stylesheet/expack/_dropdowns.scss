@@ -1,0 +1,13 @@
+[data-type="dropdown"] {
+    [data-toggle="dropdown"] {
+        ul.dropdown-list {
+            text-align: center;
+            li.dropdown-item {
+                &.list-header {
+                    text-transform: uppercase;
+                    opacity: 50%;
+                }
+            }
+        }
+    }
+}

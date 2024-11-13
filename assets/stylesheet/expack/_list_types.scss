@@ -1,0 +1,31 @@
+@mixin ListOptions ($list) {
+    .list-#{$list} {
+        list-style-type: unquote($list);
+    }
+}
+@mixin ListMulti ($name, $list) {
+    .list-#{$name} {
+        list-style-type: unquote($list);
+    }
+}
+@include ListOptions("none");
+@include ListOptions("upper-alpha"); 
+@include ListOptions("lower-alpha");
+@include ListOptions("upper-roman");
+@include ListOptions("lower-roman");
+@include ListOptions("upper-latin");
+@include ListOptions("lower-latin");
+@include ListOptions("lower-greek"); // uses lowercase greek characters
+@include ListOptions("decimal");
+@include ListMulti("decimal-zero", "decimal-leading-zero");
+@include ListOptions("georgian");
+@include ListOptions("hebrew");
+@include ListOptions("armenian");
+@include ListMulti("ideographic", "cjk-ideographic");
+@include ListOptions("hirigana");
+@include ListOptions("hirigana-iroha");
+@include ListOptions("katana");
+@include ListOptions("katana-iroha"); 
+@include ListOptions("disc");
+@include ListOptions("circle");
+@include ListOptions("square");

@@ -1,0 +1,52 @@
+@mixin LinkChanges ($option, $type, $name) {
+    @if $option == under {
+        [data-link="under-#{$name}"] {
+            text-decoration: $type;
+        }
+    } @else if $option == weight {
+        [data-link="weight-#{$type}"] {
+            font-weight: $type;
+        }
+    } @else if $option == style {
+        [data-link="style-#{$type}"] {
+            font-style: $type; 
+        }
+    }
+}
+@mixin HoverChange ($option, $type, $name) {
+    @if $option == style {
+        [data-hover="#{$name}"]:hover {
+            font-style: $type;
+        }
+    } @else if $option == under {
+        [data-hover="#{$name}"]:hover {
+            text-decoration: $type;
+        }
+    } @else if $option == weight {
+        [data-hover="#{$name}"]:hover {
+            font-weight: $type;
+        }
+    }
+}
+@include LinkChanges(style, italic, italic);
+@include LinkChanges(style, oblique, oblique);
+@include LinkChanges(under, dotted, dotted);
+@include LinkChanges(under, double, double);
+@include LinkChanges(under, line-through, strike);
+@include LinkChanges(under, none, none);
+@include LinkChanges(under, overline, over);
+@include LinkChanges(under, solid, solid);
+@include LinkChanges(under, wavy, wavy);
+@include LinkChanges(under, underline, base);
+@include HoverChange(weight, bold, bold);
+@include HoverChange(style, italic, italic);
+@include HoverChange(style, oblique, oblique);
+@include HoverChange(under, dotted, dotted);
+@include HoverChange(under, double, double);
+@include HoverChange(under, line-through, strike);
+@include HoverChange(under, none, none);
+@include HoverChange(under, overline, over);
+@include HoverChange(under, solid, solid);
+@include HoverChange(under, wavy, wavy);
+@include HoverChange(under, underline, base);
+@include HoverChange(weight, bold, bold);
