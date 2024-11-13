@@ -6,11 +6,11 @@ Gem::Specification.new do |spec|
   spec.name = "expack_gem"
   spec.version = ExpackGem::VERSION
   spec.authors = ["TeamExpack"]
-  spec.email = ["46199301+MicroRay620@users.noreply.github.com"]
+  spec.email = ["teamexpack@gmail.com"]
 
   spec.summary = "The official ruby gem for ExPack web library."
   # spec.description = "The official ruby gem for ExPack web library"
-  spec.homepage = "https://github.com/ExpackTeam/expack_gem"
+  spec.homepage = "https://github.com/ExPackTeam/expack_gem/blob/master/README.md"
   spec.license = "MIT"
   spec.required_ruby_version = ">= 3.0.0"
 
@@ -25,9 +25,10 @@ Gem::Specification.new do |spec|
   gemspec_file = File.basename(__FILE__)
   spec.files = IO.popen(%w[git ls-files -z], chdir: __dir__, err: IO::NULL) do |ls|
     ls.readlines("\x0", chomp: true).reject do |f|
-      f == gemspec_file || f.start_with?(*%w[bin/ test/ spec/ features/ .git .github appveyor Gemfile])
+      f == gemspec_file ||
+        f.start_with?(*%w[bin/ test/ spec/ features/ .git .github appveyor Gemfile assets/])
     end
-  end
+  end  
   
   spec.bindir = "exe"
   spec.executables = spec.files.grep(%r{\Aexe/}) { |f| File.basename(f) }
