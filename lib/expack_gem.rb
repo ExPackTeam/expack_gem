@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 require_relative "expack_gem/version"
-require "popper_js"
 module ExpackGem
   class Error < StandardError; end
   class << self 
