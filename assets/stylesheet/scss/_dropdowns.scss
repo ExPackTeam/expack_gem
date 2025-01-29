@@ -1,0 +1,37 @@
+[data-drop="dropdown"] {
+    [data-toggle="dropdown"] {
+        ul.dropdown-list {
+            text-align: center;
+            li.dropdown-item {
+                &.list-header {
+                    text-transform: uppercase;
+                    opacity: 50%;
+                }
+            }
+        }
+    }
+}
+select[data-toggle="dropdown"] {
+    option.dropdown-item {
+        &.bullet::before {
+            content: "\2022";
+        }
+        &.arrow::before {
+            content: ">";
+        }
+    }
+}
+optgroup {
+    text-transform: capitalize;
+    &.fw-bold {
+        font-weight: bold;
+    }
+    option.dropdown-item {
+        &.bullet::before {
+            content: "\2022";
+        }
+        &.arrow::before {
+            content: ">";
+        }
+    }
+}

@@ -1,0 +1,14 @@
+@mixin DataMath($name, $unicode) {
+    i[data-math="#{$name}"]::before {
+        content: $unicode;
+        font-style: normal;
+    }
+}
+@include DataMath("times", "\00d7");
+@include DataMath("divide", "\00F7");
+@include DataMath("mean", "\0078\0304");
+@include DataMath("mean-sigma", "\03C3");
+@include DataMath("sigma-add", "\03A3");
+@include DataMath("delta", "\0394");
+@include DataMath("mu-deviation", "\03BC");
+@include DataMath("theta-ordinal", "\03B8");

@@ -1,0 +1,107 @@
+@mixin BaseBorderOptions($type, $option) {
+    [data-bord="#{$type}-#{$option}"] {
+        @if $type == "stl" {
+            border-style: unquote($option);
+        } @else if $type == "sz" {
+            border-width: unquote($option);
+        }
+    }
+}
+@mixin PositionBorderOptions($type, $position, $option) {
+    [data-bord="#{$type}-#{$position}-#{$option}"] {
+        @if $position == "top" {
+            @if $type == "stl" {
+                border-top-style: unquote($option);
+            } @else if $type == "siz" {
+                border-top-width: unquote($option);
+            }
+        } @else if $position == "rgt" {
+            @if $type == "stl" {
+                border-right-style: unquote($option);
+            } @else if $type == "siz"{
+                border-right-width: unquote($option);
+            }
+        } @else if $position == "lft" {
+            @if $type == "stl" {
+                border-left-style: unquote($option);
+            } @else if $type == "siz" {
+                border-left-width: unquote($option);
+            }
+        } @else if $position == "bot" {
+            @if $type == "stl" {
+                border-bottom-style: unquote($option);
+            } @else if $type == "siz" {
+                border-bottom-width: unquote($option);
+            }
+        }
+    }
+}
+// Universal Border Styles
+@include BaseBorderOptions("stl", "solid");
+@include BaseBorderOptions("stl", "dashed");
+@include BaseBorderOptions("stl", "dotted");
+@include BaseBorderOptions("stl", "double");
+@include BaseBorderOptions("stl", "grooved");
+@include BaseBorderOptions("stl", "ridge");
+@include BaseBorderOptions("stl", "inset");
+@include BaseBorderOptions("stl", "none");
+@include BaseBorderOptions("stl", "outset");
+@include BaseBorderOptions("stl", "solid");
+@include BaseBorderOptions("sz", "thin");
+@include BaseBorderOptions("sz", "medium");
+@include BaseBorderOptions("sz", "thick");
+// Top Border Styles
+@include PositionBorderOptions("stl", "top", "solid");
+@include PositionBorderOptions("stl", "top", "dashed");
+@include PositionBorderOptions("stl", "top", "dotted");
+@include PositionBorderOptions("stl", "top", "double");
+@include PositionBorderOptions("stl", "top", "grooved");
+@include PositionBorderOptions("stl", "top", "ridge");
+@include PositionBorderOptions("stl", "top", "inset");
+@include PositionBorderOptions("stl", "top", "outset");
+@include PositionBorderOptions("stl", "top", "none");
+@include PositionBorderOptions("stl", "top", "solid");
+@include PositionBorderOptions("sz", "top", "thin");
+@include PositionBorderOptions("sz", "top", "medium");
+@include PositionBorderOptions("sz", "top", "thick");
+// Left Border Styles
+@include PositionBorderOptions("stl", "lft", "solid");
+@include PositionBorderOptions("stl", "lft", "dashed");
+@include PositionBorderOptions("stl", "lft", "dotted");
+@include PositionBorderOptions("stl", "lft", "double");
+@include PositionBorderOptions("stl", "lft", "grooved");
+@include PositionBorderOptions("stl", "lft", "ridge");
+@include PositionBorderOptions("stl", "lft", "inset");
+@include PositionBorderOptions("stl", "lft", "none");
+@include PositionBorderOptions("stl", "lft", "outset");
+@include PositionBorderOptions("stl", "lft", "solid");
+@include PositionBorderOptions("sz", "lft", "thin");
+@include PositionBorderOptions("sz", "lft", "medium");
+@include PositionBorderOptions("sz", "lft", "thick");
+// Right Border Styles
+@include PositionBorderOptions("stl", "rgt", "solid");
+@include PositionBorderOptions("stl", "rgt", "dashed");
+@include PositionBorderOptions("stl", "rgt", "dotted");
+@include PositionBorderOptions("stl", "rgt", "double");
+@include PositionBorderOptions("stl", "rgt", "grooved");
+@include PositionBorderOptions("stl", "rgt", "ridge");
+@include PositionBorderOptions("stl", "rgt", "inset");
+@include PositionBorderOptions("stl", "rgt", "none");
+@include PositionBorderOptions("stl", "rgt", "outset");
+@include PositionBorderOptions("stl", "rgt", "solid");
+@include PositionBorderOptions("sz", "rgt", "thin");
+@include PositionBorderOptions("sz", "rgt", "medium");
+@include PositionBorderOptions("sz", "rgt", "thick");
+// Bottom Border Styles
+@include PositionBorderOptions("stl", "bot", "dashed");
+@include PositionBorderOptions("stl", "bot", "dotted");
+@include PositionBorderOptions("stl", "bot", "double");
+@include PositionBorderOptions("stl", "bot", "grooved");
+@include PositionBorderOptions("stl", "bot", "ridge");
+@include PositionBorderOptions("stl", "bot", "inset");
+@include PositionBorderOptions("stl", "bot", "outset");
+@include PositionBorderOptions("stl", "bot", "none");
+@include PositionBorderOptions("stl", "bot", "solid");
+@include PositionBorderOptions("sz", "bot", "thin");
+@include PositionBorderOptions("sz", "bot", "medium");
+@include PositionBorderOptions("sz", "bot", "thick");

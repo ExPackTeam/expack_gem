@@ -1,0 +1,32 @@
+@mixin DisplayOptions ($display) {
+    [data-display="#{$display}"] {
+        display: $display;
+    }
+}
+@include DisplayOptions("auto");
+@include DisplayOptions("block");
+@include DisplayOptions("contents");
+@include DisplayOptions("flex");
+@include DisplayOptions("flexbox");
+@include DisplayOptions("flow-root");
+@include DisplayOptions("grid");
+@include DisplayOptions("inline");
+@include DisplayOptions("inline-block");
+@include DisplayOptions("inline-flex");
+@include DisplayOptions("inline-flexbox");
+@include DisplayOptions("inline-table");
+@include DisplayOptions("list-item");
+@include DisplayOptions("none");
+@include DisplayOptions("ruby");
+@include DisplayOptions("ruby-base");
+@include DisplayOptions("ruby-base-container");
+@include DisplayOptions("ruby-text-container");
+@include DisplayOptions("run-in");
+@include DisplayOptions("table");
+@include DisplayOptions("table-caption");
+@include DisplayOptions("table-column");
+@include DisplayOptions("table-column-group");
+@include DisplayOptions("table-footer-group");
+@include DisplayOptions("table-header-group");
+@include DisplayOptions("table-row");
+@include DisplayOptions("table-row-group");

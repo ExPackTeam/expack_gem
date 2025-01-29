@@ -1,0 +1,115 @@
+@import "./margins";
+@mixin Alignment($align, $place) {
+	@if $align == "align" {
+		.align-#{$place} {
+			@if $place == "center" {
+					align-content: center;
+					margin: 0 auto;
+			} @else if $place == "centre" {
+				align-content: center;
+				margin: 0 auto;
+			} @else {
+				float: unquote($place);
+			}
+		}
+	} @else if $align == "justify" {
+		.just-#{$place} {
+			@if $place != "centre" {
+				justify-content: unquote($place);
+			} @else {
+				justify-content: center;
+			}
+		}
+	} @else if $align == "text" {
+		.text-#{$place} {
+			@if $place != "centre" {
+				text-align: unquote($place);
+			} @else {
+				text-align: center;
+			}
+		}
+	} @else if $align == "item" {
+		.item-#{$place} {
+			@if $place != "centre" {
+				align-items: unquote($place);
+			} @else {
+				align-items: center;
+			} 
+		}
+	} @else if $align == "self" {
+		.self-#{$place} {
+			@if $place != "centre" {
+				align-self: unquote($place);
+			} @else {
+				align-self: center;
+			}
+		}
+	} @else if $align == "content" {
+		.cont-#{$place} {
+			@if $place != "centre" {
+				align-content: unquote($place);
+			} @else {
+				align-content: center;
+			}
+		}
+	} @else if $align == "track" {
+		.trak-#{$place} {
+			@if $place != "centre" {
+				justify-content: unquote($place);
+			} @else {
+				justify-content: center;
+			}
+		}
+	} @else if $align == "position" {
+		.pose-#{$place} {
+			position: unquote($place);
+		}
+	}
+}
+// Alignment
+@include Alignment("align", "left");
+@include Alignment("align", "center");
+@include Alignment("align", "centre");
+@include Alignment("align", "right");
+// Justify 
+@include Alignment("justify", "left");
+@include Alignment("justify", "center");
+@include Alignment("justify", "centre");
+@include Alignment("justify", "right");
+// Text
+@include Alignment("text", "left");
+@include Alignment("text", "center");
+@include Alignment("text", "centre");
+@include Alignment("text", "right");
+@include Alignment("text", "justify");
+// Item
+@include Alignment("item", "left");
+@include Alignment("item", "center");
+@include Alignment("item", "centre");
+@include Alignment("item", "right");
+// Self
+@include Alignment("self", "left");
+@include Alignment("self", "center");
+@include Alignment("self", "centre");
+@include Alignment("self", "right");
+// Content
+@include Alignment("content", "left");
+@include Alignment("content", "center");
+@include Alignment("content", "centre");
+@include Alignment("content", "right");
+// Track
+@include Alignment("track", "left");
+@include Alignment("track", "center");
+@include Alignment("track", "centre");
+@include Alignment("track", "right");
+// Position
+@include Alignment("position", "absolute");
+@include Alignment("position", "fixed");
+@include Alignment("position", "inherit");
+@include Alignment("position", "initial");
+@include Alignment("position", "relative");
+@include Alignment("position", "revert");
+@include Alignment("position", "revert-layer");
+@include Alignment("position", "static");
+@include Alignment("position", "sticky");
+@include Alignment("position", "unset");

@@ -1,0 +1,51 @@
+@mixin DecorOption ($type) {
+    .td-#{$type} {
+        text-decoration: unquote($type);
+    }
+}
+@mixin DecorOptionDiff ($name, $type) {
+    .td-#{$name} {
+        text-decoration: unquote($type);
+    }
+}
+@mixin FontWeight($type) {
+    .fw-#{$type} {
+        font-weight: unquote($type);
+    }
+}
+@mixin TextTransform($class, $type) {
+    .tf-#{$class} {
+        text-transform: unquote($type);
+    }
+}
+.fs-italic {
+    font-style: italic;
+}
+.fs-oblique {
+    font-style: oblique;
+}
+@include DecorOption("dashed");
+@include DecorOption("dotted");
+@include DecorOption("double");
+@include DecorOptionDiff("strike", "line-through");
+@include DecorOption("none");
+@include DecorOptionDiff("over", "overline");
+@include DecorOption("solid");
+@include DecorOptionDiff("under", "underline");
+@include DecorOption("wavy");
+@include FontWeight("lighter");
+@include FontWeight("normal");
+@include FontWeight("bold");
+@include FontWeight("bolder");
+@include TextTransform("none", "none");
+@include TextTransform("caps", "capitalize");
+@include TextTransform("upcs", "uppercase");
+@include TextTransform("lwcs", "lowercase");
+@include TextTransform("fwid", "full-width");
+@include TextTransform("fszk", "full-size-kana");
+@include TextTransform("mtha", "math-auto");
+@include TextTransform("inht", "inherit");
+@include TextTransform("init", "initial");
+@include TextTransform("rvrt", "revert");
+@include TextTransform("rvtl", "revert-layer");
+@include TextTransform("unst", "unset");

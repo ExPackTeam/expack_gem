@@ -1,0 +1,20 @@
+[data-tool="tooltip"] {
+	position: relative;
+	display: inline-block;
+	border-bottom: 1px dotted black;
+	pointer-events: none;
+	[data-tip="tooltip"] {
+		visibility: hidden;
+		position: absolute;
+	}
+	[data-tool="tooltip"]:hover [data-tip="tooltip"] {
+		display: inline;
+		position: absolute;
+		bottom: calc(100% + 5px);
+		left: 50%;
+		transform: translate(-50%);
+		text-align: center;
+		visibility: visible;
+		position: top;
+	}
+}
