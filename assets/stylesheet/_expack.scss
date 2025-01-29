@@ -1,0 +1,34 @@
+@import "./border_options";
+@import "./fonts";
+@import "./headers";
+@import "./modal";
+@import "./tooltip";
+@import "./navbar";
+@import "./alignment";
+@import "./math";
+@import "./dropdowns";
+@import "./list_types";
+@import "./text_styles";
+.close {
+	color: #aaa;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+	&::before {
+		content:"\00d7";
+	}
+	&:hover, &:focus {
+		color: black; // Figure out how to have that work in javascript
+	  	text-decoration: none;
+	  	cursor: pointer;
+	}
+}
+.place-hrz {
+	display: inline;
+}
+iframe {
+	margin: auto;
+}
+.disable {
+	cursor:not-allowed;
+}
